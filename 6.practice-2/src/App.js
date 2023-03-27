@@ -1,8 +1,21 @@
+import React from 'react';
+
+import { CartContextProvider } from './store/cart-context';
+
+import Header from './components/Header/Header';
+import AvailableMeals from './components/AvailableMeals/AvailableMeals';
+import Cart from './components/UI/Cart/Cart';
+
 function App() {
+
   return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
+    <>
+      <CartContextProvider>
+        <Cart />
+        <Header />
+        <AvailableMeals />
+      </CartContextProvider>
+    </>
   );
 }
 
